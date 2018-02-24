@@ -35,22 +35,22 @@ app.get('/', function(req, res){
     res.sendFile(__dirname + "/" + "index.html");
 });
 
-var notes = require('./app/controllers/note.controller');
+var books = require('./app/controllers/book.controller');
 
 // Creamos una nueva nota
-app.post('/notes', notes.create);
+app.post('/books', books.create);
 
 // Obtenemos todas las notas
-app.get('/notes', notes.findAll);
+app.get('/books', books.findAll);
 
-// encuentra una nota con el noteId
-app.get('/notes/:noteId', notes.findOne);
+// encuentra una nota con el bookId
+app.get('/books/:bookId', books.findOne);
 
-// Actualiza una nota con el noteId
-app.put('/notes/:noteId', notes.update);
+// Actualiza una nota con el bookId
+app.put('/books/:bookId', books.update);
 
-// Elimina una nota con el noteId
-app.delete('/notes/:noteId', notes.deleteNote);
+// Elimina una nota con el bookId
+app.delete('/books/:bookId', books.deleteNote);
 
 app.listen(3000, function(){
     console.log('El servidor web esta corriendo en el puerto 3000...!')

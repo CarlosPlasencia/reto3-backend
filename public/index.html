@@ -5,14 +5,17 @@
     <title>CoreUpgrade 2018</title>
 </head>
 <body>
-    <h1>Bienvenido al CoreUpgrade</h1>
+    <h1>Libreria</h1>
 
-    <h2>Todo-List</h2>
+    <h2>Agrega un nuevo libro:</h2>
 
-    <form action = "http://localhost:3000/notes" method = "POST">
-        Titulo: <input type = "text" name = "title">  <br>
-        contenido: <input type = "text" name = "content">
-         <input type = "submit" value = "Submit">
+    <form action = "http://localhost:3000/books" method = "POST">
+        Nombre: <input type = "text" name = "name">  <br>
+        autor: <input type = "text" name = "author"> <br>
+        fecha prestamo: <input type = "date" name = "date_give"> <br>
+        paginas: <input type = "number" name = "pages"> <br>
+        fecha de devolucion: <input type = "date" name = "date_return"> <br>
+        <input type = "submit" value = "Guardar">
     </form>
 
 </body>
